@@ -54,7 +54,10 @@ while menu != '1' or menu != '2':
         file = open("SecurePasswordData.txt", "r")
         print(f"{Fore.GREEN}Software\tUsername\tPassword")
         for i in file:
-            data = i.split(";|")
-            print(data[0]+"\t\t"+data[1]+"\t\t"+data[2])
+            try:
+                data = i.split(";|")
+                print(data[0]+"\t\t"+data[1]+"\t\t"+data[2])
+            except IndexError:
+                pass
     if menu == '3':
         exit()
