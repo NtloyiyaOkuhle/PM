@@ -51,7 +51,7 @@ while menu != '1' or menu != '2':
         file.write(encrypt(softwareName,shift) +";|"+encrypt(username,shift)+ ";|"+encrypt(password,shift)+"\n")
         file.close()
     if menu == '2':
-        file = open("securePasswordData.txt", "r")
+        file = open("SecurePasswordData.txt", "r")
         print(f"{Fore.GREEN}Software\tUsername\tPassword")
         for i in file:
             data = i.split(";|")
